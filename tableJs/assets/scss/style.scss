@@ -1,0 +1,249 @@
+#table{
+    color: white;
+    .form{
+        padding: 100px 0;
+        .form-bg{
+            background-image: url(https://images.unsplash.com/photo-1449496967047-2a322e78ec26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-height: 566px;
+            form{
+                padding: 25% 16%;
+                gap: 50px;
+                .input-box{
+                    position: relative;
+                    width: 100%;
+                    input{
+                        padding: 15px;
+                        width: 100%;
+                        border: none;
+                        opacity: 0.6;
+                        outline: none;
+                    }
+                    label{
+                        position: absolute;
+                        top: -65%;
+                    }
+                }
+                .upload{
+                    align-self: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: absolute;
+                    top: 312px;
+                    left: 225px;
+                    width: 31%;
+                    .icon{
+                        background-color: white;
+                        opacity: 0.6;
+                        width: 100%;
+                        padding: 12px;
+                        text-align: center;
+                        i{
+                            font-size: 29px;
+                            color: green;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+    
+                button{
+                    border: none;
+                    padding: 11px;
+                    width: 50%;
+                    opacity: 0.8;
+                    transition: 0.7s;
+                    &:hover{
+                        background-color: #c8b857;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    
+    .table-c{
+        text-align: center;
+        max-height: 566px;
+        overflow-y: scroll;
+        /* width */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+  
+        /* Track */
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #78a68e; 
+            border-radius: 10px;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #c8b857; 
+        }
+        .helper{
+           background-color: #78a68e;
+            .filter i,
+            .search i{
+                cursor: pointer;
+                color: white;
+                font-size: 17px;
+            }
+            #remove i{
+                color: rgb(151, 56, 56);
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .search{
+                border-right: 0.5px solid #78a68e;
+                padding: 0 15px;
+                position: relative;
+                i{
+                    position: absolute;
+                    left: 83%;
+                    color: #78a68e;
+                }
+                #search{
+                    border: 1px solid #fff;
+                    outline: none;
+                    padding: 10px 15px;
+                    width: 250px;
+                    opacity: 0.7;
+                    
+                    &:focus{
+                        border: 1px solid #78a68e;
+                    }
+                }
+            }
+           
+            .filter{
+                input{
+                    width: 81px;
+                    border: 0.5px solid #fff;
+                    outline: none;
+                    font-size: 14px;
+                    padding: 10px;
+                    opacity: 0.7;
+                    &::placeholder{
+                        font-size: 13px;
+                    }
+                    &:focus{
+                        border: 0.5px solid #78a68e;
+                    }
+                }
+            }
+        }
+        table{
+            
+            thead th{
+                color:  #fff;
+                background-color: #78a68e;
+                
+            }
+            tbody{
+                border-style: solid;
+               tr{
+                transition: 0.7s;
+                border-bottom: 0.5px solid gray;
+                td{
+                    border: none;
+                    .image{
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                    .edit{
+                        height: 100%;
+                        border: 0.5px solid gray;
+                        background-color: #d6c681;
+                        outline: none;
+                        padding: 5px 10px;
+                    }
+                }
+                &:hover{
+                    background-color: #d6c681;
+                }
+               }
+            }
+        }
+    }
+
+}
+
+body{
+    input[type='checkbox']{
+        width: 15px !important;
+        height: 15px !important;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance:none;
+        outline: none;
+        position: relative;
+        border: 1px solid yellowgreen;
+        margin-top: 6px;
+        cursor: pointer;
+      }
+      input[type='checkbox']:checked:after {
+        content: '✔';
+        color: white;
+        font-size: 10px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+      }
+}
+
+
+
+#popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000087;
+    display: none;
+    .inner{
+        position: relative;
+        border: 8px solid white;
+        width: 80%;
+        margin: auto;
+        .img-box{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        
+        p{
+        margin: 0;
+        background-color: white;
+        padding: 10px 0;
+        text-align: center;
+        }
+        .close-icon{
+            position: absolute;
+            top: -2%;
+            right: -1%;
+            background-color: #333;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            i{
+                font-size: 25px;
+                color: white;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,62 @@
+#login{
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transition: all 0.8s;
+    z-index: 1;
+    .title{
+        z-index: 1;
+        text-align: center;
+    }
+    .login{
+        width: 220px;
+        position: relative;
+        height: 150px;
+        label{
+            position: absolute;
+            top: -22%;
+            left: 1%;
+            font-size: 14px;
+            color: rgb(163, 163, 163) ;
+            font-weight: 300;
+            transition: 0.4s;
+        }
+        input{
+            border: none;
+            padding: 10px;
+            outline: none;
+            background-color: #80808085;
+            color: white;
+            &:focus{
+                border: 1px solid yellowgreen;
+            }
+            &:focus + .name{
+                top: -22%;
+                left: 1%;
+                font-size: 14px;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+
+        button{
+            transition: 0.5s;
+            border: none;
+            &:hover{
+                background-color: yellowgreen;
+                color: #333;
+            }
+        }
+        .error{
+            color: #cd2929;
+            font-weight: 500;
+            font-size: 16px;
+            opacity: 0;
+            transition: all 0.7s;
+            visibility: hidden;
+        }
+    }
+
+}

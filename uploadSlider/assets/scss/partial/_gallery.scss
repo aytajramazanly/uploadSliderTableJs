@@ -1,0 +1,108 @@
+#gallery{
+    left: 0;
+    position: absolute;
+    transition: all 1s;
+    height: 100vh;
+    z-index: 1;
+    width: 100%;
+    overflow-y: scroll;
+    .gallery-title{
+        margin: 5%;
+        h2{
+            display: inline;
+        }
+    }
+
+    // .upload{
+    //     height: 80px;
+    //     width: 200px;
+    //     background-color: white;
+    //     border-radius: 5%;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     input{
+    //         display: none;
+    //     }
+    //     i{
+    //         font-size: 25px;
+    //         color: rgb(141, 158, 107);
+    //         cursor: pointer;
+    //         transition: 0.4s;
+    //         &:hover{
+    //             transform: translateY(-5px);
+    //             color: yellowgreen;
+    //         }
+    //     }
+    // }
+
+    .images{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 100px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8%;
+
+        .upload-second{
+            width: 240px;
+            height: 160px;
+            background: white;
+            border-radius: 5%;
+            &:hover i{
+                font-size: 40px;
+            }
+            i{
+                color: gray;
+                font-size: 30px;
+                transition: 0.7s;
+                cursor: pointer;
+            }
+            input{
+                display: none;
+            }
+        }
+
+        .img-box{
+            overflow: hidden;
+            position: relative;
+            border-radius: 5%;
+            width: 240px;
+            height: 160px;
+            cursor: pointer;
+            img{
+                transition: 0.8s;
+                position: relative;
+                width: 100%;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            &::after{
+                content: "";
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                position: absolute;
+                background-color: #00000087;
+                opacity: 0.6;
+                transition: 0.5s;
+            }
+            &:hover::after{
+                height: 0;
+            }
+        }
+    }
+}
+
+.gallery-active{
+    transform: translateX(0);
+    opacity: 1;
+}
+.gallery-none{
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+}

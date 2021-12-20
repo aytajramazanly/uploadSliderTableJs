@@ -1,0 +1,318 @@
+#login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  left: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  z-index: 1;
+}
+
+#login .title {
+  z-index: 1;
+  text-align: center;
+}
+
+#login .login {
+  width: 220px;
+  position: relative;
+  height: 150px;
+}
+
+#login .login label {
+  position: absolute;
+  top: -22%;
+  left: 1%;
+  font-size: 14px;
+  color: #a3a3a3;
+  font-weight: 300;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#login .login input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  background-color: #80808085;
+  color: white;
+}
+
+#login .login input:focus {
+  border: 1px solid yellowgreen;
+}
+
+#login .login input:focus + .name {
+  top: -22%;
+  left: 1%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#login .login button {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
+}
+
+#login .login button:hover {
+  background-color: yellowgreen;
+  color: #333;
+}
+
+#login .login .error {
+  color: #cd2929;
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  visibility: hidden;
+}
+
+#gallery {
+  left: 0;
+  position: absolute;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  height: 100vh;
+  z-index: 1;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+#gallery .gallery-title {
+  margin: 5%;
+}
+
+#gallery .gallery-title h2 {
+  display: inline;
+}
+
+#gallery .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 8%;
+}
+
+#gallery .images .upload-second {
+  width: 240px;
+  height: 160px;
+  background: white;
+  border-radius: 5%;
+}
+
+#gallery .images .upload-second:hover i {
+  font-size: 40px;
+}
+
+#gallery .images .upload-second i {
+  color: gray;
+  font-size: 30px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+#gallery .images .upload-second input {
+  display: none;
+}
+
+#gallery .images .img-box {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5%;
+  width: 240px;
+  height: 160px;
+  cursor: pointer;
+}
+
+#gallery .images .img-box img {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  position: relative;
+  width: 100%;
+}
+
+#gallery .images .img-box img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#gallery .images .img-box::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: #00000087;
+  opacity: 0.6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#gallery .images .img-box:hover::after {
+  height: 0;
+}
+
+.gallery-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.gallery-none {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000087;
+  display: none;
+  z-index: 1;
+}
+
+#popup .inner {
+  position: relative;
+  border: 8px solid white;
+  width: 900px;
+}
+
+#popup .inner .big-img-box img {
+  width: 100%;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+#popup .inner p {
+  margin: 0;
+  background-color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#popup .inner .close-icon {
+  position: absolute;
+  top: -2%;
+  right: -1%;
+  background-color: #333;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#popup .inner .close-icon i {
+  font-size: 25px;
+  color: white;
+}
+
+#popup .inner .arrows {
+  width: 100%;
+  position: absolute;
+  top: 44%;
+}
+
+#popup .inner .arrows i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .popup p {
+    font-size: 15px;
+  }
+  .popup .img-box {
+    width: 900px;
+  }
+  .popup .img-box img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .popup p {
+    font-size: 15px;
+  }
+  .popup .img-box {
+    width: 600px;
+  }
+  .popup .img-box img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .popup p {
+    font-size: 15px;
+  }
+  .popup .img-box {
+    width: 345px;
+  }
+  .popup .img-box img {
+    width: 100%;
+  }
+}
+
+main {
+  background-image: url(https://images.wallpaperscraft.com/image/single/leaves_bush_branches_178580_1920x1080.jpg);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00000070;
+}
+
+main::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #00000070;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body h1,
+body h2,
+body h4 {
+  color: white;
+}
+
+body h4 {
+  font-weight: 300;
+}
+
+.name-uppercase {
+  display: inline-block !important;
+}
+
+.name-uppercase::first-letter {
+  text-transform: uppercase;
+}

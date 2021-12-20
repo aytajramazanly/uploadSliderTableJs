@@ -1,0 +1,291 @@
+@charset "UTF-8";
+#table {
+  color: white;
+}
+
+#table .form {
+  padding: 100px 0;
+}
+
+#table .form .form-bg {
+  background-image: url(https://images.unsplash.com/photo-1449496967047-2a322e78ec26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 566px;
+}
+
+#table .form .form-bg form {
+  padding: 25% 16%;
+  gap: 50px;
+}
+
+#table .form .form-bg form .input-box {
+  position: relative;
+  width: 100%;
+}
+
+#table .form .form-bg form .input-box input {
+  padding: 15px;
+  width: 100%;
+  border: none;
+  opacity: 0.6;
+  outline: none;
+}
+
+#table .form .form-bg form .input-box label {
+  position: absolute;
+  top: -65%;
+}
+
+#table .form .form-bg form .upload {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 312px;
+  left: 225px;
+  width: 31%;
+}
+
+#table .form .form-bg form .upload .icon {
+  background-color: white;
+  opacity: 0.6;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+}
+
+#table .form .form-bg form .upload .icon i {
+  font-size: 29px;
+  color: green;
+  cursor: pointer;
+}
+
+#table .form .form-bg form button {
+  border: none;
+  padding: 11px;
+  width: 50%;
+  opacity: 0.8;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+#table .form .form-bg form button:hover {
+  background-color: #c8b857;
+  opacity: 1;
+}
+
+#table .table-c {
+  text-align: center;
+  max-height: 566px;
+  overflow-y: scroll;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#table .table-c::-webkit-scrollbar {
+  width: 10px;
+}
+
+#table .table-c::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+#table .table-c::-webkit-scrollbar-thumb {
+  background: #78a68e;
+  border-radius: 10px;
+}
+
+#table .table-c::-webkit-scrollbar-thumb:hover {
+  background: #c8b857;
+}
+
+#table .table-c .helper {
+  background-color: #78a68e;
+}
+
+#table .table-c .helper .filter i,
+#table .table-c .helper .search i {
+  cursor: pointer;
+  color: white;
+  font-size: 17px;
+}
+
+#table .table-c .helper #remove i {
+  color: #973838;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#table .table-c .helper .search {
+  border-right: 0.5px solid #78a68e;
+  padding: 0 15px;
+  position: relative;
+}
+
+#table .table-c .helper .search i {
+  position: absolute;
+  left: 83%;
+  color: #78a68e;
+}
+
+#table .table-c .helper .search #search {
+  border: 1px solid #fff;
+  outline: none;
+  padding: 10px 15px;
+  width: 250px;
+  opacity: 0.7;
+}
+
+#table .table-c .helper .search #search:focus {
+  border: 1px solid #78a68e;
+}
+
+#table .table-c .helper .filter input {
+  width: 81px;
+  border: 0.5px solid #fff;
+  outline: none;
+  font-size: 14px;
+  padding: 10px;
+  opacity: 0.7;
+}
+
+#table .table-c .helper .filter input::-webkit-input-placeholder {
+  font-size: 13px;
+}
+
+#table .table-c .helper .filter input:-ms-input-placeholder {
+  font-size: 13px;
+}
+
+#table .table-c .helper .filter input::-ms-input-placeholder {
+  font-size: 13px;
+}
+
+#table .table-c .helper .filter input::placeholder {
+  font-size: 13px;
+}
+
+#table .table-c .helper .filter input:focus {
+  border: 0.5px solid #78a68e;
+}
+
+#table .table-c table thead th {
+  color: #fff;
+  background-color: #78a68e;
+}
+
+#table .table-c table tbody {
+  border-style: solid;
+}
+
+#table .table-c table tbody tr {
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  border-bottom: 0.5px solid gray;
+}
+
+#table .table-c table tbody tr td {
+  border: none;
+}
+
+#table .table-c table tbody tr td .image {
+  width: 100%;
+  cursor: pointer;
+}
+
+#table .table-c table tbody tr td .edit {
+  height: 100%;
+  border: 0.5px solid gray;
+  background-color: #d6c681;
+  outline: none;
+  padding: 5px 10px;
+}
+
+#table .table-c table tbody tr:hover {
+  background-color: #d6c681;
+}
+
+body input[type='checkbox'] {
+  width: 15px !important;
+  height: 15px !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  position: relative;
+  border: 1px solid yellowgreen;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+body input[type='checkbox']:checked:after {
+  content: '✔';
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+#popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000087;
+  display: none;
+}
+
+#popup .inner {
+  position: relative;
+  border: 8px solid white;
+  width: 80%;
+  margin: auto;
+}
+
+#popup .inner .img-box {
+  width: 100%;
+}
+
+#popup .inner .img-box img {
+  width: 100%;
+}
+
+#popup .inner p {
+  margin: 0;
+  background-color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#popup .inner .close-icon {
+  position: absolute;
+  top: -2%;
+  right: -1%;
+  background-color: #333;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#popup .inner .close-icon i {
+  font-size: 25px;
+  color: white;
+}
