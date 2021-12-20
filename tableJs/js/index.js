@@ -35,6 +35,7 @@ uploadIcon.nextElementSibling.addEventListener("change",function (e) {
                 })
                })
              })
+            
             document.querySelector("form").reset()
             edit()
             document.querySelectorAll(".image").forEach((item)=>{
@@ -44,7 +45,10 @@ uploadIcon.nextElementSibling.addEventListener("change",function (e) {
                 })
             })
         }
-           }
+        else{
+            document.querySelector("form span").style.opacity="1"
+        }
+        }
         fileReader.readAsDataURL(file)
     }
    
@@ -105,7 +109,7 @@ function remove() {
 }
 
 function checkInputs(name,surname,salary) {
-    if (name.split("").some(item=>item!==" ") || surname.split("").some(item=>item!==" ") || salary.split("").some(item=>item!==" ")) {
+    if (name.split("").some(item=>item!==" ") && surname.split("").some(item=>item!==" ") && salary.split("").some(item=>item!==" ")) {
         return true
     }
     else{

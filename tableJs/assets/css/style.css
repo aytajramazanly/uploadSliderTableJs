@@ -19,6 +19,15 @@
   gap: 50px;
 }
 
+#table .form .form-bg form span {
+  color: red;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0;
+}
+
 #table .form .form-bg form .input-box {
   position: relative;
   width: 100%;
